@@ -83,7 +83,8 @@ const Navbar = () => {
                 href="#home"
                 onClick={(e) => handleNavClick(e, 'home')}
               >
-                Home
+                <i className="bi bi-house-door nav-icon d-lg-none me-2 text-info"></i>
+                <span>Home</span>
               </a>
             </li>
             <li className="nav-item">
@@ -92,7 +93,8 @@ const Navbar = () => {
                 href="#about"
                 onClick={(e) => handleNavClick(e, 'about')}
               >
-                About
+                <i className="bi bi-person nav-icon d-lg-none me-2 text-info"></i>
+                <span>About</span>
               </a>
             </li>
             <li className="nav-item">
@@ -101,7 +103,8 @@ const Navbar = () => {
                 href="#skills"
                 onClick={(e) => handleNavClick(e, 'skills')}
               >
-                Skills
+                <i className="bi bi-cpu nav-icon d-lg-none me-2 text-info"></i>
+                <span>Skills</span>
               </a>
             </li>
             <li className="nav-item">
@@ -110,7 +113,8 @@ const Navbar = () => {
                 href="#experience"
                 onClick={(e) => handleNavClick(e, 'experience')}
               >
-                Experience
+                <i className="bi bi-briefcase nav-icon d-lg-none me-2 text-info"></i>
+                <span>Experience</span>
               </a>
             </li>
             <li className="nav-item">
@@ -119,7 +123,8 @@ const Navbar = () => {
                 href="#projects"
                 onClick={(e) => handleNavClick(e, 'projects')}
               >
-                Projects
+                <i className="bi bi-code-square nav-icon d-lg-none me-2 text-info"></i>
+                <span>Projects</span>
               </a>
             </li>
             <li className="nav-item">
@@ -128,7 +133,8 @@ const Navbar = () => {
                 href="#education"
                 onClick={(e) => handleNavClick(e, 'education')}
               >
-                Education
+                <i className="bi bi-mortarboard nav-icon d-lg-none me-2 text-info"></i>
+                <span>Education</span>
               </a>
             </li>
             <li className="nav-item">
@@ -137,7 +143,8 @@ const Navbar = () => {
                 href="#services"
                 onClick={(e) => handleNavClick(e, 'services')}
               >
-                Services
+                <i className="bi bi-gear nav-icon d-lg-none me-2 text-info"></i>
+                <span>Services</span>
               </a>
             </li>
             <li className="nav-item">
@@ -146,37 +153,37 @@ const Navbar = () => {
                 href="#contact"
                 onClick={(e) => handleNavClick(e, 'contact')}
               >
-                Contact
+                <i className="bi bi-envelope nav-icon d-lg-none me-2 text-info"></i>
+                <span>Contact</span>
               </a>
             </li>
             
-            {/* GitHub Profile Button in Navbar */}
-            <li className="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a
-                href="https://github.com/rakesh12345behera"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-sm btn-glass-outline px-2 py-1"
-                title="GitHub: rakesh12345behera"
-                aria-label="GitHub Profile"
-              >
-                <i className="bi bi-github"></i>
-                <span className="d-lg-none ms-1">GitHub</span>
-              </a>
-            </li>
+            {/* Quick Action Buttons (GitHub & Resume) */}
+            <li className="nav-item ms-lg-2 mt-3 mt-lg-0 nav-actions-wrapper">
+              <div className="d-flex align-items-center gap-2 w-100">
+                <a
+                  href="https://github.com/rakesh12345behera"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-sm btn-glass-outline flex-fill d-inline-flex align-items-center justify-content-center gap-2 px-3 py-2"
+                  title="GitHub: rakesh12345behera"
+                  aria-label="GitHub Profile"
+                >
+                  <i className="bi bi-github"></i>
+                  <span>GitHub</span>
+                </a>
 
-            {/* Quick Resume CTA in Navbar */}
-            <li className="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a
-                href={`${import.meta.env.BASE_URL}resume.pdf`}
-                download="Rakesh_Behera_Resume.pdf"
-                className="btn btn-sm btn-glass-outline px-3 py-1"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <i className="bi bi-file-earmark-arrow-down text-info"></i>
-                <span>Resume</span>
-              </a>
+                <a
+                  href={`${import.meta.env.BASE_URL}resume.pdf`}
+                  download="Rakesh_Behera_Resume.pdf"
+                  className="btn btn-sm btn-gradient flex-fill d-inline-flex align-items-center justify-content-center gap-2 px-3 py-2"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="bi bi-file-earmark-arrow-down"></i>
+                  <span>Resume</span>
+                </a>
+              </div>
             </li>
           </ul>
         </div>
