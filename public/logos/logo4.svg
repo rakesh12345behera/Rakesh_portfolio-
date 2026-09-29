@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="crestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#512bd4" /> <!-- Official .NET Purple -->
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#00d2ff" />
+    </linearGradient>
+    <linearGradient id="darkMatte" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14" />
+      <stop offset="100%" stop-color="#14112c" />
+    </linearGradient>
+    <filter id="crestGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Squircle Base Container -->
+  <rect x="7" y="7" width="106" height="106" rx="28" fill="url(#darkMatte)" stroke="url(#crestGrad)" stroke-width="2.5" />
+
+  <!-- Background Subtle Grid Mesh Lines -->
+  <line x1="20" y1="40" x2="100" y2="40" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+  <line x1="20" y1="80" x2="100" y2="80" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+  <line x1="40" y1="20" x2="40" y2="100" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+  <line x1="80" y1="20" x2="80" y2="100" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+
+  <!-- Stylized C# Cross & Initials Emblem -->
+  <g filter="url(#crestGlow)">
+    <!-- Main Left Pillar 'R' -->
+    <path d="M 32 30 L 46 30 L 46 90 L 32 90 Z" fill="url(#crestGrad)" rx="3" />
+
+    <!-- Upper Loop 'R' & 'B' -->
+    <path d="M 46 30 Q 74 30 74 48 Q 74 62 46 62" fill="none" stroke="url(#crestGrad)" stroke-width="9" stroke-linecap="round" />
+
+    <!-- Lower Loop 'B' & Kick 'R' -->
+    <path d="M 46 62 Q 78 62 78 76 Q 78 90 46 90" fill="none" stroke="#00d2ff" stroke-width="9" stroke-linecap="round" />
+    <line x1="52" y1="62" x2="78" y2="90" stroke="url(#crestGrad)" stroke-width="9" stroke-linecap="round" />
+
+    <!-- Mini .NET Hash Tag Symbol # at Top Right -->
+    <g transform="translate(82, 26) scale(0.65)">
+      <line x1="4" y1="0" x2="0" y2="18" stroke="#00d2ff" stroke-width="3" stroke-linecap="round" />
+      <line x1="12" y1="0" x2="8" y2="18" stroke="#00d2ff" stroke-width="3" stroke-linecap="round" />
+      <line x1="-2" y1="6" x2="16" y2="6" stroke="#00d2ff" stroke-width="3" stroke-linecap="round" />
+      <line x1="-4" y1="12" x2="14" y2="12" stroke="#00d2ff" stroke-width="3" stroke-linecap="round" />
+    </g>
+  </g>
+</svg>
